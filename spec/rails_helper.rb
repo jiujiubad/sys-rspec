@@ -60,4 +60,9 @@ RSpec.configure do |config|
   # 3-9如何出错
   config.filter_run :focus => true
   config.run_all_when_everything_filtered = true
+
+  # 4-6测试短期费率前，用devise提供的测试看是否登录
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :view
+  config.include Devise::Test::IntegrationHelpers, type: :feature
 end
