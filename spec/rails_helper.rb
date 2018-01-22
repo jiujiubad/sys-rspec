@@ -54,4 +54,8 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  # 3-9如何出错
+  config.filter_run :focus => true
+  config.run_all_when_everything_filtered = true
 end
